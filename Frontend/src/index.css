@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: serif;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-black;
+  }
+  h2 {
+    @apply text-3xl font-black;
+  }
+  h3 {
+    @apply text-2xl font-black;
+  }
+  h4 {
+    @apply text-xl font-black;
+  }
+  h5 {
+    @apply text-lg font-black;
+  }
+  h6 {
+    @apply text-base font-black;
+  }
+  input,
+  textarea {
+    @apply text-black w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-0 text-base;
+  }
+  input:focus,
+  textarea:focus {
+    @apply border-[#003366];
+  }
+  input:placeholder {
+    @apply text-[#888] font-normal;
+  }
+}
+
+@layer utilities {
+  .formButton {
+    @apply w-full py-2 px-4 bg-[#003366] text-white rounded-lg font-medium hover:bg-[#1a4473];
+  }
+  .formLabel {
+    @apply block text-sm font-medium text-gray-700;
+  }
+  .formError {
+    @apply text-xs text-red-600 ml-1;
+  }
+}

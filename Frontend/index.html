@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IELTS Preparation Web</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script type="module">
+      import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+      createChat({
+        webhookUrl:
+          "https://wahab006.app.n8n.cloud/webhook/dead89f3-1eeb-48cf-9663-492ba744eb76/chat",
+        initialMessages: ["Hi there! 👋", "I'm AI-Assistant"],
+        i18n: {
+          en: {
+            title: "Hi there! ",
+            subtitle: "Start a chat. We're here to help you 24/7.",
+            inputPlaceholder: "Type your question.",
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
